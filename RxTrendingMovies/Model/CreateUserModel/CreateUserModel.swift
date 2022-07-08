@@ -11,10 +11,15 @@ import Foundation
 class CreateUserModel
 {
   var firstname: String?
+
   var lastname : String?
+
   var email : String?
+
   var mobilenumber : String?
+
   var password : String?
+
   var confirmpassword: String?
   
   init(firstname: String? = "" , lastname: String? = "", email : String? = "" , mobilenumber: String? = "", password: String? = "" , confirmpassword: String? = "") {
