@@ -37,9 +37,9 @@ class FirebaseAuthService: NSObject {
   func forgotPassword(createUserModel : CreateUserModel , completionBlock: @escaping (_ success: Bool , _ errorData : Error?) -> Void) {
     FirebaseAuthService.firebaseAuth.sendPasswordReset(withEmail: createUserModel.email ?? "") { error in
       if error != nil{
-        completionBlock(false , error)
-      }else {
         completionBlock(true , error)
+      }else {
+        completionBlock(false , error)
       }
     }
   }

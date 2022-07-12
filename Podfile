@@ -27,6 +27,7 @@ target 'RxTreandingMovies' do
   end
 
   target 'RxTreandingMoviesUITests' do
+    inherit! :complete
     # Pods for testing
   end
 

@@ -49,8 +49,22 @@ class Utility: NSObject {
   }
   
   
-  class func setStoryboard() -> UIStoryboard? {
-    return UIStoryboard(name:  "Main", bundle: nil)
+  class func getStoryboard() -> UIStoryboard? {
+      return UIStoryboard(name: mainStoryboardName, bundle: nil)
   }
   
+  //MARK:- Navigate to DashboardVC screen
+    class func navigateToTabBarVC(window: UIWindow, isPush: Bool){
+        let vc = Utility.getStoryboard()?.instantiateViewController(withIdentifier: "TabBarVCIdentifier") as! TabBarVC
+        window.rootViewController = vc
+        window.makeKeyAndVisible()
+    }
+    
+  //MARK:- Navigate to DashboardVC screen
+    class func navigateToLoginVC(window: UIWindow, isPush: Bool)
+  {
+      let vc = Utility.getStoryboard()?.instantiateViewController(withIdentifier: "loginVCIdentifier") //as! LoginVC
+      window.rootViewController = vc
+      window.makeKeyAndVisible()
+  }
 }

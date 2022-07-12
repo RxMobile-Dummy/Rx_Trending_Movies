@@ -188,7 +188,7 @@ class CustomAlert: UIViewController, UITextFieldDelegate {
 
 
   class func displayAlertWithTextField(onView delegate: AnyObject, withTitle title: String , withAlertMsg alertMessage : String? , isForgotPassword password : Bool? = false, placeHolderMessage message: String, alertImage image: String?, yesButtonTitle yesTitle: String?, yesButtonAction yesAction: @escaping (_ strTextField: String)->Void, noButtonTitle noTitle: String?, noButtonAction noAction: @escaping ()->Void)  {
-    let alertController = Utility.setStoryboard()?.instantiateViewController(withIdentifier: "CustomAlertIdentifier") as! CustomAlert
+    let alertController = Utility.getStoryboard()?.instantiateViewController(withIdentifier: "CustomAlertIdentifier") as! CustomAlert
     alertController.strOfAlertTitle = title
     alertController.strOfPlaceHolder = message
     alertController.strOfAlertMessage = alertMessage
