@@ -1,0 +1,17 @@
+//
+//  Production.xcconfig
+//  RxTreandingMovies
+//
+//  Created by Ranjana Patidar on 12/07/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-RxTrendingMovies/Pods-RxTrendingMovies.debug(production).xcconfig"
+#include "Pods/Target Support Files/Pods-RxTrendingMovies/Pods-RxTrendingMovies.release(production).xcconfig"
+
+ROOT_URL = https:/$()/www.radixweb.com
+API_KEY = sdsdsdtg54dxz28a_hkzos7jd803001nd
+APP_NAME = RxTrendingMovies
+APP_BUNDLE_ID = com.rxmanage.RxManagement
