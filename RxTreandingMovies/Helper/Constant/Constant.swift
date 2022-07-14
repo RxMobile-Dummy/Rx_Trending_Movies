@@ -22,6 +22,7 @@ let kPOST_LOGIN_URL = "user/login"
 
 //MARK: - AppDelegate Object
 let SwiftAppDelegate  = (UIApplication.shared.delegate as! AppDelegate)
+var sceneDelegate = SceneDelegate()
 
 //MARK: - View Controller Identifier Name
 let kVIEWCONTROLLER_IDENTIFIER = ViewControllerIdentifier()
@@ -41,8 +42,8 @@ let kFORGOT_PASSWORD = "Forgot Password"
 let kTEXTFIELD_ENTER_EMAIL = "Enter email"
 let kTEXTFIELD_ENTER_PASSWORD = "Enter password"
 let kTEXTFIELD_ENTER_CONFIRM_PASSWORD = "Enter confirm password"
-let kTEXTFIELD_ENTER_FNAME = "Enter firstName"
-let kTEXTFIELD_ENTER_LNAME = "Enter lastName"
+let kTEXTFIELD_ENTER_FNAME = "Enter first name"
+let kTEXTFIELD_ENTER_LNAME = "Enter last name"
 let kTEXTFIELD_ENTER_MOBILE_NUMBER = "Enter mobile number"
 
 //MARK: - Validation Message
@@ -77,3 +78,6 @@ let KACC_TOKEN  = "acc_token"
 
 //MARK: - UserDefault
 let kUSERDEFAULT                = UserDefaults.standard
+
+//MARK: - Storyboard Name
+let mainStoryboardName = "Main"

@@ -108,6 +108,28 @@ extension UIViewController {
         }
         return button
     }
+    
+    func showToast(message : String) {
+
+        var hgt = message.heightForView(font: UIFont.systemFont(ofSize: 16.0), width: self.view.frame.size.width - 40)
+        hgt = hgt > 50 ? hgt : 50
+        let toastLabel = UILabel(frame: CGRect(x: 20, y: self.view.frame.size.height - (hgt + 150), width: self.view.frame.size.width - 40, height: hgt))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.font = UIFont.systemFont(ofSize: 16.0)
+        toastLabel.textAlignment = .center;
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+             toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
+    }
+    
 }
 
 extension UIColor {
@@ -132,7 +154,15 @@ extension UIColor {
 }
 
 extension String {
-  public var storyboardName: String  {
-        return "Main"
-  }
+    func heightForView(font:UIFont, width:CGFloat) -> CGFloat{
+        let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+        label.numberOfLines = 0
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.font = font
+        label.text = self
+
+        label.sizeToFit()
+        return label.frame.height
+    }
+
 }

@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
+//  MovieDetailsVC.swift
 //  RxTreandingMovies
 //
-//  Created by Ranjana Patidar on 11/07/22.
+//  Created by Devangi Prajapati on 08/07/22.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class MovieDetailsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
