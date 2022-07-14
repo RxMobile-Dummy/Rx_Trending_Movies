@@ -1,0 +1,18 @@
+//
+//  Development.xcconfig
+//  RxTreandingMovies
+//
+//  Created by Ranjana Patidar on 12/07/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-RxTrendingMovies/Pods-RxTrendingMovies.debug(development).xcconfig"
+#include "Pods/Target Support Files/Pods-RxTrendingMovies/Pods-RxTrendingMovies.release(development).xcconfig"
+
+ROOT_URL = http:/$()/localhost:3000
+API_KEY = tg54dxz28a_hkzos7jd803001nd
+APP_NAME = RxTrendingMovies(development)
+APP_BUNDLE_ID = com.rxmanage.RxManagement.dev
+BUNDLE_ID_SUFFIX = .dev

@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '12.0'
 
-target 'RxTreandingMovies' do
+target 'RxTrendingMovies' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'SwiftyJSON'
@@ -21,12 +21,12 @@ target 'RxTreandingMovies' do
 
   # Pods for RxTreandingMovies
 
-  target 'RxTreandingMoviesTests' do
+  target 'RxTrendingMoviesTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'RxTreandingMoviesUITests' do
+  target 'RxTrendingMoviesUITests' do
     inherit! :complete
     # Pods for testing
   end
