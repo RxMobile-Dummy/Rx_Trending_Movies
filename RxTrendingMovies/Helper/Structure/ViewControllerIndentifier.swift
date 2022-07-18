@@ -11,11 +11,14 @@ struct ViewControllerIdentifier
 {
     let loginVC   =  "loginVCIdentifier"
     let signUpVC = "signUpVCIdentifier"
+    let forgotPasswordVC = "ForgotPasswordVCIdentifier"
 }
 
 struct TableViewCellIdentifier
 {
-    let txtFieldCellIdentifier = "textfieldTblCellIdentifier"
+  let customLblTblCellIdentifier = "customLblTblCellIdentifier"
+  let customTxtFieldTblCellIdentifier  = "customTxtFieldTblCellIdentifier"
+  let customBtnTblCellIdentifier  = "customBtnTblCellIdentifier"
 }
 
 struct LoginReqParams : Codable {

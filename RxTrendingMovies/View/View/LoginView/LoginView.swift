@@ -132,11 +132,22 @@ class LoginView: NSObject {
   }
 
   //MARK: - Navigate To ForgotPassword Screen
+  /**
+   Call this method for navigate to forgotPassword
+   - Parameter vc : It is a object of LoginVC
+   - Returns: Bool
+   */
   func navigateToForgotPassword(vc : LoginVC) {
-      let objRegistrationOrderNumber = Utility.getStoryboard()?.instantiateViewController(withIdentifier: "ForgotPasswordVCIdentifier") as! ForgotPasswordVC
-      vc.navigationController?.pushViewController(objRegistrationOrderNumber, animated: true)
+    let objRegistrationOrderNumber = Utility.getStoryboard()?.instantiateViewController(withIdentifier: kVIEWCONTROLLER_IDENTIFIER.forgotPasswordVC) as! ForgotPasswordVC
+    vc.navigationController?.pushViewController(objRegistrationOrderNumber, animated: true)
   }
 
+  //MARK: - Navigate To Home Screen
+  /**
+   Call this method for navigate to Home
+   - Parameter vc : It is a object of LoginVC
+   - Returns: Bool
+   */
   func navigateToHomeVC( vc : LoginVC) {
     DispatchQueue.main.async {
         Utility.navigateToTabBarVC(window: sceneDelegate.window!, isPush: true)

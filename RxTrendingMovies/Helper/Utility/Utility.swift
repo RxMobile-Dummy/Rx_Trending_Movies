@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import PKHUD
+import SwiftyJSON
+import Kingfisher
 
 class Utility: NSObject {
   
@@ -50,21 +53,65 @@ class Utility: NSObject {
   
   
   class func getStoryboard() -> UIStoryboard? {
-      return UIStoryboard(name: mainStoryboardName, bundle: nil)
+    return UIStoryboard(name: mainStoryboardName, bundle: nil)
   }
   
   //MARK:- Navigate to DashboardVC screen
-    class func navigateToTabBarVC(window: UIWindow, isPush: Bool){
-        let vc = Utility.getStoryboard()?.instantiateViewController(withIdentifier: "TabBarVCIdentifier") as! TabBarVC
-        window.rootViewController = vc
-        window.makeKeyAndVisible()
-    }
-    
+  class func navigateToTabBarVC(window: UIWindow, isPush: Bool){
+    let vc = Utility.getStoryboard()?.instantiateViewController(withIdentifier: "TabBarVCIdentifier") as! TabBarVC
+    window.rootViewController = vc
+    window.makeKeyAndVisible()
+  }
+
   //MARK:- Navigate to DashboardVC screen
-    class func navigateToLoginVC(window: UIWindow, isPush: Bool)
+  class func navigateToLoginVC(window: UIWindow, isPush: Bool)
   {
-      let vc = Utility.getStoryboard()?.instantiateViewController(withIdentifier: "loginVCIdentifier") //as! LoginVC
-      window.rootViewController = vc
-      window.makeKeyAndVisible()
+    let vc = Utility.getStoryboard()?.instantiateViewController(withIdentifier: "loginVCIdentifier") //as! LoginVC
+    window.rootViewController = vc
+    window.makeKeyAndVisible()
+  }
+
+  //MARK:- Hud Show and Hide Method
+  /**
+   Call this method for showProgressView method
+   */
+  class func showProgressView()
+  {
+    DispatchQueue.main.async{
+      HUD.show(.progress)
+      HUD.hide(afterDelay: 60.0)
+    }
+  }
+  /**
+   Call this method for hideProgressView method
+   */
+  class func hideProgressView()
+  {
+    DispatchQueue.main.async{
+      HUD.hide()
+    }
+  }
+
+  class func convertModel<T: Encodable>(toJSON modelObject: T) -> JSON {
+    if let data = try? JSONEncoder().encode(modelObject), let jsonData = try? JSON(data: data) {
+      return jsonData
+    }
+    return JSON.null
+  }
+
+  //MARK: - set CustomNavigationBar Method
+  class func SetCustomNavigationBar()
+  {
+    if #available(iOS 15, *) {
+      let appearance = UINavigationBarAppearance()
+      appearance.configureWithOpaqueBackground()
+      appearance.backgroundColor = Config.BTN_THEME_COLOR
+      appearance.titleTextAttributes = [NSAttributedString.Key.font: Config.FONTBOLD14 ?? UIFont(),  NSAttributedString.Key.foregroundColor: Config.whiteColor]
+      UINavigationBar.appearance().standardAppearance = appearance
+      UINavigationBar.appearance().scrollEdgeAppearance = UINavigationBar.appearance().standardAppearance
+    }else{
+      UINavigationBar.appearance().barTintColor = Config.BTN_THEME_COLOR
+      UINavigationBar.appearance().titleTextAttributes = [ NSAttributedString.Key.font: Config.FONTBOLD14 ?? UIFont(),  NSAttributedString.Key.foregroundColor: Config.whiteColor]
+    }
   }
 }

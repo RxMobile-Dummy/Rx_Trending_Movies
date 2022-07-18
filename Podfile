@@ -7,17 +7,19 @@ target 'RxTrendingMovies' do
   pod 'SwiftyJSON'
   pod 'IQKeyboardManagerSwift'
   pod 'PKHUD'
+  pod 'PINRemoteImage'
   pod 'SlideMenuControllerSwift'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
   pod 'Firebase/RemoteConfig'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
+  pod 'Firebase/Functions'
   pod 'Firebase/Auth'
-#  pod 'RealmSwift', '~>10'
   pod 'Firebase/Core'
   pod 'Alamofire'
   pod 'AlamofireObjectMapper'
+  pod 'Kingfisher'
 
   # Pods for RxTreandingMovies
 

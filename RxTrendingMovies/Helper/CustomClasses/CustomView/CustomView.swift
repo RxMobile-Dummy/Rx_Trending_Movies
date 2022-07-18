@@ -20,6 +20,7 @@ class CustomShadowView: UIView {
 
     @IBInspectable var cornerRadius: CGFloat = 4.0
     var shadowColor: UIColor = UIColor.gray
+    var borderColor : UIColor = UIColor.lightGray
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -34,14 +35,16 @@ class CustomShadowView: UIView {
         self.setDropShadowAndRadius()
     }
 
-    func setDropShadowAndRadius() {
-        self.layer.masksToBounds = false
-        self.clipsToBounds = false
-        self.layer.shadowRadius = 2.0
-        self.layer.shadowColor = shadowColor.cgColor
-        self.layer.shadowOffset = CGSize(width: 0, height: 0.7)
-        self.layer.shadowOpacity = 0.5
-        self.layer.cornerRadius = cornerRadius
-    }
+  func setDropShadowAndRadius() {
+    self.layer.masksToBounds = false
+    self.clipsToBounds = false
+    self.layer.shadowRadius = 2.0
+    self.layer.borderColor = borderColor.cgColor
+    self.layer.borderWidth = 1.0
+    self.layer.shadowColor = shadowColor.cgColor
+    self.layer.shadowOffset = CGSize(width: 0, height: 0.7)
+    self.layer.shadowOpacity = 0.5
+    self.layer.cornerRadius = cornerRadius
+  }
 
 }
