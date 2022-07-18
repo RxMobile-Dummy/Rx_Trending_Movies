@@ -9,7 +9,6 @@ import UIKit
 import Firebase
 
 class LoginViewModel: NSObject {
-
   /**
    firebaseAuthService object call for Firebse Auth Service
    */

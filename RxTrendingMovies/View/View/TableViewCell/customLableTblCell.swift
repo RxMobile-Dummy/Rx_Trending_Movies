@@ -31,7 +31,6 @@ class customLblTblCell: UITableViewCell {
    - Parameter vc : It is a object of ForgotPassword Screen
    */
   func setUpLblMethod(index : Int , vc : ForgotPasswordVC) {
-    CustomLabel.setCustomLblFuncation(lbl: lblTitle, lblText: "Please enter your register email address, so we will send you link to your email", lblFont: Config.FONTREGULAR14, lblTextColor: Config.BlackColor, lblBgColor: Config.ClearColor, lblBorderColor: Config.ClearColor, lblBorderWidth: 0.0, lblCornerRadius: 0.0, lblAttributedText: nil, isAttributedText: false, lblTextAlignment: .center, lblNumberOfLine: 0, lblLineBreakMode: .byCharWrapping)
+    CustomLabel.setCustomLblFuncation(lbl: lblTitle, lblText: kMSG_PLEASE_ENTER_YOUR_REGISTER_EMAIL_ADDRESS, lblFont: Config.FONTREGULAR14, lblTextColor: Config.BlackColor, lblBgColor: Config.ClearColor, lblBorderColor: Config.ClearColor, lblBorderWidth: 0.0, lblCornerRadius: 0.0, lblAttributedText: nil, isAttributedText: false, lblTextAlignment: .center, lblNumberOfLine: 0, lblLineBreakMode: .byCharWrapping)
   }
-  
 }

@@ -13,6 +13,8 @@ xcuserdata
 profile
 *.moved-aside
 DerivedData
+!GoogleService-Info.plist
+!Podfile.lock
 .idea/
 *.hmap
 *.xccheckout

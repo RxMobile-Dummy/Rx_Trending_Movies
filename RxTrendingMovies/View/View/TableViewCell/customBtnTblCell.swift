@@ -16,12 +16,10 @@ class customBtnTblCell: UITableViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
-    CustomButton.setBtnFontTitleBgColorTintColorWithImage(btn: btnReset, andImgOfButton: "", andIsImage: false, andIsOnlyImageNoTintColor: false, andBtnTintColor: Config.whiteColor, andBtnTitle: "Reset", andBtnTitleColor: Config.whiteColor, andBtnFont: Config.FONTBOLD14, andBtnBgColor: Config.BTN_THEME_COLOR, andBtnContentMode: .center, andBtnCornerRadius: 5.0, andBtnBorderColor: Config.ClearColor, andBtnBorderWidth: 0.0, lblNumberOfLine: 0 , lblLineBreakMode: .byWordWrapping , lblTextAlignMent: .center)
   }
   
   override func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
-    
     // Configure the view for the selected state
   }
   
@@ -32,6 +30,7 @@ class customBtnTblCell: UITableViewCell {
    */
   func setupBtnResetData(vc : ForgotPasswordVC)
   {
+    CustomButton.setBtnFontTitleBgColorTintColorWithImage(btn: btnReset, andImgOfButton: "", andIsImage: false, andIsOnlyImageNoTintColor: false, andBtnTintColor: Config.whiteColor, andBtnTitle: kBTN_RESET_PASSWORD, andBtnTitleColor: Config.whiteColor, andBtnFont: Config.FONTBOLD14, andBtnBgColor: Config.BTN_THEME_COLOR, andBtnContentMode: .center, andBtnCornerRadius: 5.0, andBtnBorderColor: Config.ClearColor, andBtnBorderWidth: 0.0, lblNumberOfLine: 0 , lblLineBreakMode: .byWordWrapping , lblTextAlignMent: .center)
     btnReset.addTarget(vc, action:#selector(vc.btnActionResetPassword), for: UIControl.Event.touchUpInside)
   }
   

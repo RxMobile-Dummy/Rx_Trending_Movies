@@ -66,7 +66,7 @@ class ForgotPasswordView: NSObject
    - Parameter vc : It is a object of ForgotPasswordVC
    */
   class func setTextFieldPlaceHoder(vc: ForgotPasswordVC){
-    vc.arrPlaceHolder =  ["", "Enter eamil" , "Reset Password"]
+    vc.arrPlaceHolder =  ["", kTEXTFIELD_ENTER_EMAIL , kBTN_RESET_PASSWORD]
   }
 
   //MARK:- Custom Tableview Cell For Row
@@ -75,15 +75,15 @@ class ForgotPasswordView: NSObject
     var cell = UITableViewCell()
     switch indexpath.row {
     case 0:
-      let lblCell = tblview.dequeueReusableCell(withIdentifier: "customLblTblCellIdentifier", for: indexpath) as! customLblTblCell
+      let lblCell = tblview.dequeueReusableCell(withIdentifier: kTABLEVIEW_CELL_IDENTIFIER.customLblTblCellIdentifier, for: indexpath) as! customLblTblCell
       lblCell.setUpLblMethod(index: indexpath.row, vc: vc)
       cell =  lblCell
     case 1:
-      let txtFieldCell = tblview.dequeueReusableCell(withIdentifier: "customTxtFieldTblCellIdentifier", for: indexpath) as! customTxtFieldTblCell
+      let txtFieldCell = tblview.dequeueReusableCell(withIdentifier: kTABLEVIEW_CELL_IDENTIFIER.customTxtFieldTblCellIdentifier, for: indexpath) as! customTxtFieldTblCell
       txtFieldCell.setUpTextFieldData(index: indexpath.row, vc: vc)
       cell = txtFieldCell
     case 2:
-      let btnCell = tblview.dequeueReusableCell(withIdentifier: "customBtnTblCellIdentifier", for: indexpath) as! customBtnTblCell
+      let btnCell = tblview.dequeueReusableCell(withIdentifier: kTABLEVIEW_CELL_IDENTIFIER.customBtnTblCellIdentifier, for: indexpath) as! customBtnTblCell
       btnCell.setupBtnResetData(vc: vc)
       cell = btnCell
     default:

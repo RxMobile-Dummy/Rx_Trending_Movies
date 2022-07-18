@@ -23,9 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
        //Make sure to do this else you won't get
        //the windowScene object using UIApplication.shared.connectedScenes
         self.window?.windowScene = windowScene
-
         sceneDelegate = windowScene.delegate as! SceneDelegate
-       
         let userId = kUSERDEFAULT.object(forKey: "CurrentUser") as? String
         if ((userId ?? "") != "") {
             Utility.navigateToTabBarVC(window: self.window!, isPush: true)

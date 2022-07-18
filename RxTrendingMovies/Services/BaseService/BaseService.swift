@@ -12,14 +12,11 @@ import SwiftyJSON
 class BaseService: NSObject {
 
   func  PostAPICall <T:Decodable,R>(reqURL:String, request: R, modelName : T.Type, completion: @escaping (T?, NSError?) -> Void) {
-
-    print(modelName)
       let urls = REST_SERVICE_MAIN_URL + reqURL
       let headers = getHeaders()
 
       AF.request(urls, method: .post
           , parameters: request as? Parameters, encoding: URLEncoding.default, headers: headers, interceptor:nil).validate(statusCode: [200]).responseJSON { (response) in
-              print(response.result)
               switch response.result {
               case .failure(let error):
                   completion(nil, kError)
@@ -27,7 +24,7 @@ class BaseService: NSObject {
               case .success( _):
                   do {
                       let decoder = JSONDecoder()
-                      decoder.keyDecodingStrategy = .convertFromSnakeCase
+                      decoder.keyDecodingStrategy = .useDefaultKeys
                       let result = try decoder.decode(modelName.self, from: response.data!)
                       completion(result, nil)
                   } catch {
@@ -40,24 +37,19 @@ class BaseService: NSObject {
 
 
   func GetAPICall <T:Codable>(reqURL:String ,appendParams: String, modelName : T.Type, completion: @escaping (T?, NSError?) -> Void) {
-      let urls = REST_SERVICE_MAIN_URL + reqURL + "/" + appendParams
-      let headers = getHeadersWithAuthorizationKey()
-
+      let urls = REST_SERVICE_MAIN_URL + reqURL + "?" + appendParams
       AF.request(urls, method: .get
-          , parameters: nil, encoding: URLEncoding.default, headers: headers, interceptor:nil).validate(statusCode: [200]).responseJSON { (response) in
-              print(response.result)
+          , parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor:nil).validate(statusCode: [200]).responseJSON { (response) in
               switch response.result {
               case .failure(let error):
                   completion(nil, kError)
                   print(error)
-
               case .success( _):
                   do {
                       let decoder = JSONDecoder()
-                      decoder.keyDecodingStrategy = .convertFromSnakeCase
+                      decoder.keyDecodingStrategy = .useDefaultKeys
                       let result = try decoder.decode(T.self, from: response.data!)
                       completion(result, nil)
-
                   } catch {
                       print(error)
                       completion(nil, kError)
@@ -67,7 +59,6 @@ class BaseService: NSObject {
   }
 
   func getHeadersWithAuthorizationKey() -> HTTPHeaders {
-
       var headers = HTTPHeaders()
       if kisLogin {
           headers = ["Authorization":"Bearer 337fa497b7f53444ea977c904f939d25a6337c9d"  ]

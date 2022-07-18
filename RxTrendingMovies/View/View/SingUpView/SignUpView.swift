@@ -9,6 +9,7 @@ import UIKit
 
 class SignUpView: NSObject {
 
+  /// validation object of Validation
   static  let validation = Validation()
 
   //MARK: - intiallyLoadView Method

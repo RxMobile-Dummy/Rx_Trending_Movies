@@ -218,8 +218,6 @@ class CustomAlert: UIViewController, UITextFieldDelegate {
   }
 
   @IBAction func btnYesTapAction(_ sender: AnyObject) {
-    print(txtAlertTextField.text!)
-    //    self.objOfLogin.canSendEmailString.send(txtAlertTextField.text!)
     closeView(true, source: .Yes)
   }
 

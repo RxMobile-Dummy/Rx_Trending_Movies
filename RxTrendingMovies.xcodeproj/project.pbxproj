@@ -10,7 +10,7 @@
 		257895BF044973B03F94723F /* Pods_RxTrendingMoviesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D8B066B94A4065AA3417AF /* Pods_RxTrendingMoviesTests.framework */; };
 		3EEFBEB5314E5041CC2C9C2A /* Pods_RxTrendingMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBD5323B0F66DE74E8130C0 /* Pods_RxTrendingMovies.framework */; };
 		7027F885287E95D900407481 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F826287E95D800407481 /* HomeViewModel.swift */; };
-		7027F886287E95D900407481 /* BookMarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F828287E95D800407481 /* BookMarkViewModel.swift */; };
+		7027F886287E95D900407481 /* FavouriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F828287E95D800407481 /* FavouriteViewModel.swift */; };
 		7027F887287E95D900407481 /* ForgotPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F82A287E95D800407481 /* ForgotPasswordModel.swift */; };
 		7027F888287E95D900407481 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F82C287E95D800407481 /* SignUpViewModel.swift */; };
 		7027F889287E95D900407481 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F82E287E95D800407481 /* LoginViewModel.swift */; };
@@ -19,11 +19,11 @@
 		7027F88C287E95D900407481 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7027F832287E95D800407481 /* GoogleService-Info.plist */; };
 		7027F88D287E95D900407481 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7027F833287E95D800407481 /* LaunchScreen.storyboard */; };
 		7027F88E287E95D900407481 /* CreateUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F837287E95D800407481 /* CreateUserModel.swift */; };
-		7027F88F287E95D900407481 /* bookMarkMovieClCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F83B287E95D800407481 /* bookMarkMovieClCell.swift */; };
+		7027F88F287E95D900407481 /* favouriteMovieClCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F83B287E95D800407481 /* favouriteMovieClCell.swift */; };
 		7027F890287E95D900407481 /* treandingMoviesClCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F83C287E95D800407481 /* treandingMoviesClCell.swift */; };
 		7027F891287E95D900407481 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F83E287E95D800407481 /* ForgotPasswordView.swift */; };
 		7027F892287E95D900407481 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F840287E95D800407481 /* SignUpView.swift */; };
-		7027F893287E95D900407481 /* BookMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F842287E95D800407481 /* BookMarkView.swift */; };
+		7027F893287E95D900407481 /* FavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F842287E95D800407481 /* FavouriteView.swift */; };
 		7027F894287E95D900407481 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F844287E95D800407481 /* HomeView.swift */; };
 		7027F895287E95D900407481 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F846287E95D800407481 /* MovieDetailsView.swift */; };
 		7027F896287E95D900407481 /* customBtnTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F848287E95D800407481 /* customBtnTblCell.swift */; };
@@ -34,7 +34,7 @@
 		7027F89B287E95D900407481 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F851287E95D800407481 /* TabBarVC.swift */; };
 		7027F89C287E95D900407481 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F853287E95D900407481 /* HomeVC.swift */; };
 		7027F89D287E95D900407481 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F855287E95D900407481 /* SignUpVC.swift */; };
-		7027F89E287E95D900407481 /* BookMarkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F857287E95D900407481 /* BookMarkVC.swift */; };
+		7027F89E287E95D900407481 /* FavouriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F857287E95D900407481 /* FavouriteVC.swift */; };
 		7027F89F287E95D900407481 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F859287E95D900407481 /* LoginVC.swift */; };
 		7027F8A0287E95D900407481 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F85B287E95D900407481 /* ForgotPasswordVC.swift */; };
 		7027F8A1287E95D900407481 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7027F85D287E95D900407481 /* Development.xcconfig */; };
@@ -58,13 +58,15 @@
 		7027F8B3287E95D900407481 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F87C287E95D900407481 /* Utility.swift */; };
 		7027F8B5287E95D900407481 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F880287E95D900407481 /* FirebaseAuthService.swift */; };
 		7027F8B6287E95D900407481 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F882287E95D900407481 /* BaseService.swift */; };
-		7027F8B7287E95D900407481 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F883287E95D900407481 /* LoginService.swift */; };
 		7027F8B8287E95D900407481 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F884287E95D900407481 /* SceneDelegate.swift */; };
 		7027F8BB287E961500407481 /* RxTrendingMoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F8BA287E961500407481 /* RxTrendingMoviesTests.swift */; };
 		7027F8BF287E963F00407481 /* RxTrendingMoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F8BD287E963F00407481 /* RxTrendingMoviesUITests.swift */; };
 		7027F8C0287E963F00407481 /* RxTrendingMoviesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F8BE287E963F00407481 /* RxTrendingMoviesUITestsLaunchTests.swift */; };
 		7027F8C2287EA5A400407481 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F8C1287EA5A400407481 /* Environment.swift */; };
 		9C2D37E12606B26CF4CF596A /* Pods_RxTrendingMovies_RxTrendingMoviesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4D58488742B1A245AA22AA /* Pods_RxTrendingMovies_RxTrendingMoviesUITests.framework */; };
+		D6E4F8CB287FF8700029F046 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4F8CA287FF8700029F046 /* MovieModel.swift */; };
+		D6E4F8CE287FF9570029F046 /* ReachabilityC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4F8CD287FF9570029F046 /* ReachabilityC.swift */; };
+		D6E4F8D2287FFAFA0029F046 /* TrendingMovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4F8D1287FFAFA0029F046 /* TrendingMovieService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,7 +108,7 @@
 		67B1F08DA6E127E99C4A2C8D /* Pods-RxTrendingMoviesTests.release(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTrendingMoviesTests.release(production).xcconfig"; path = "Target Support Files/Pods-RxTrendingMoviesTests/Pods-RxTrendingMoviesTests.release(production).xcconfig"; sourceTree = "<group>"; };
 		69E2CDD3B3FAE2864749C9CE /* Pods-RxTrendingMovies-RxTrendingMoviesUITests.debug(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTrendingMovies-RxTrendingMoviesUITests.debug(production).xcconfig"; path = "Target Support Files/Pods-RxTrendingMovies-RxTrendingMoviesUITests/Pods-RxTrendingMovies-RxTrendingMoviesUITests.debug(production).xcconfig"; sourceTree = "<group>"; };
 		7027F826287E95D800407481 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		7027F828287E95D800407481 /* BookMarkViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookMarkViewModel.swift; sourceTree = "<group>"; };
+		7027F828287E95D800407481 /* FavouriteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteViewModel.swift; sourceTree = "<group>"; };
 		7027F82A287E95D800407481 /* ForgotPasswordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordModel.swift; sourceTree = "<group>"; };
 		7027F82C287E95D800407481 /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		7027F82E287E95D800407481 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -115,11 +117,11 @@
 		7027F832287E95D800407481 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7027F834287E95D800407481 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7027F837287E95D800407481 /* CreateUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserModel.swift; sourceTree = "<group>"; };
-		7027F83B287E95D800407481 /* bookMarkMovieClCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bookMarkMovieClCell.swift; sourceTree = "<group>"; };
+		7027F83B287E95D800407481 /* favouriteMovieClCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = favouriteMovieClCell.swift; sourceTree = "<group>"; };
 		7027F83C287E95D800407481 /* treandingMoviesClCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = treandingMoviesClCell.swift; sourceTree = "<group>"; };
 		7027F83E287E95D800407481 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		7027F840287E95D800407481 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		7027F842287E95D800407481 /* BookMarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookMarkView.swift; sourceTree = "<group>"; };
+		7027F842287E95D800407481 /* FavouriteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteView.swift; sourceTree = "<group>"; };
 		7027F844287E95D800407481 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7027F846287E95D800407481 /* MovieDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
 		7027F848287E95D800407481 /* customBtnTblCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customBtnTblCell.swift; sourceTree = "<group>"; };
@@ -130,7 +132,7 @@
 		7027F851287E95D800407481 /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		7027F853287E95D900407481 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		7027F855287E95D900407481 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
-		7027F857287E95D900407481 /* BookMarkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookMarkVC.swift; sourceTree = "<group>"; };
+		7027F857287E95D900407481 /* FavouriteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteVC.swift; sourceTree = "<group>"; };
 		7027F859287E95D900407481 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7027F85B287E95D900407481 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		7027F85D287E95D900407481 /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
@@ -155,7 +157,6 @@
 		7027F87D287E95D900407481 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7027F880287E95D900407481 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
 		7027F882287E95D900407481 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
-		7027F883287E95D900407481 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		7027F884287E95D900407481 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7027F8BA287E961500407481 /* RxTrendingMoviesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTrendingMoviesTests.swift; sourceTree = "<group>"; };
 		7027F8BD287E963F00407481 /* RxTrendingMoviesUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTrendingMoviesUITests.swift; sourceTree = "<group>"; };
@@ -174,6 +175,9 @@
 		C4A747355266FCBB6206C827 /* Pods-RxTrendingMovies.debug(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTrendingMovies.debug(production).xcconfig"; path = "Target Support Files/Pods-RxTrendingMovies/Pods-RxTrendingMovies.debug(production).xcconfig"; sourceTree = "<group>"; };
 		C4C55955DC6B521740DACACA /* Pods-RxTrendingMoviesTests.release(development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTrendingMoviesTests.release(development).xcconfig"; path = "Target Support Files/Pods-RxTrendingMoviesTests/Pods-RxTrendingMoviesTests.release(development).xcconfig"; sourceTree = "<group>"; };
 		D270822A4E691413963A86EB /* Pods-RxTreandingMovies-RxTreandingMoviesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTreandingMovies-RxTreandingMoviesUITests.release.xcconfig"; path = "Target Support Files/Pods-RxTreandingMovies-RxTreandingMoviesUITests/Pods-RxTreandingMovies-RxTreandingMoviesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D6E4F8CA287FF8700029F046 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		D6E4F8CD287FF9570029F046 /* ReachabilityC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityC.swift; sourceTree = "<group>"; };
+		D6E4F8D1287FFAFA0029F046 /* TrendingMovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingMovieService.swift; sourceTree = "<group>"; };
 		D6FA61A6286DD308002FBC4E /* RxTrendingMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxTrendingMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6FA61BC286DD30A002FBC4E /* RxTrendingMoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxTrendingMoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6FA61C6286DD30A002FBC4E /* RxTrendingMoviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxTrendingMoviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,7 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				7027F825287E95D800407481 /* HomeViewModel */,
-				7027F827287E95D800407481 /* BookMarkViewModel */,
+				7027F827287E95D800407481 /* FavouriteViewModel */,
 				7027F829287E95D800407481 /* ForgotPasswordModel */,
 				7027F82B287E95D800407481 /* SignUpViewModel */,
 				7027F82D287E95D800407481 /* LoginViewModel */,
@@ -253,12 +257,12 @@
 			path = HomeViewModel;
 			sourceTree = "<group>";
 		};
-		7027F827287E95D800407481 /* BookMarkViewModel */ = {
+		7027F827287E95D800407481 /* FavouriteViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7027F828287E95D800407481 /* BookMarkViewModel.swift */,
+				7027F828287E95D800407481 /* FavouriteViewModel.swift */,
 			);
-			path = BookMarkViewModel;
+			path = FavouriteViewModel;
 			sourceTree = "<group>";
 		};
 		7027F829287E95D800407481 /* ForgotPasswordModel */ = {
@@ -296,6 +300,7 @@
 		7027F835287E95D800407481 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D6E4F8C9287FF72E0029F046 /* MovieModel */,
 				7027F836287E95D800407481 /* CreateUserModel */,
 			);
 			path = Model;
@@ -324,7 +329,7 @@
 				7027F83A287E95D800407481 /* CollectionViewCell */,
 				7027F83D287E95D800407481 /* ForgotPasswordView */,
 				7027F83F287E95D800407481 /* SingUpView */,
-				7027F841287E95D800407481 /* BookMarkView */,
+				7027F841287E95D800407481 /* FavouriteView */,
 				7027F843287E95D800407481 /* HomeView */,
 				7027F845287E95D800407481 /* MovieDetailsView */,
 				7027F847287E95D800407481 /* TableViewCell */,
@@ -336,7 +341,7 @@
 		7027F83A287E95D800407481 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				7027F83B287E95D800407481 /* bookMarkMovieClCell.swift */,
+				7027F83B287E95D800407481 /* favouriteMovieClCell.swift */,
 				7027F83C287E95D800407481 /* treandingMoviesClCell.swift */,
 			);
 			path = CollectionViewCell;
@@ -358,12 +363,12 @@
 			path = SingUpView;
 			sourceTree = "<group>";
 		};
-		7027F841287E95D800407481 /* BookMarkView */ = {
+		7027F841287E95D800407481 /* FavouriteView */ = {
 			isa = PBXGroup;
 			children = (
-				7027F842287E95D800407481 /* BookMarkView.swift */,
+				7027F842287E95D800407481 /* FavouriteView.swift */,
 			);
-			path = BookMarkView;
+			path = FavouriteView;
 			sourceTree = "<group>";
 		};
 		7027F843287E95D800407481 /* HomeView */ = {
@@ -407,7 +412,7 @@
 				7027F850287E95D800407481 /* TabBarVC */,
 				7027F852287E95D800407481 /* HomeVC */,
 				7027F854287E95D900407481 /* SingUpVC */,
-				7027F856287E95D900407481 /* BookMarkVC */,
+				7027F856287E95D900407481 /* FavouriteVC */,
 				7027F858287E95D900407481 /* LoginVC */,
 				7027F85A287E95D900407481 /* ForgotPasswordVC */,
 			);
@@ -446,12 +451,12 @@
 			path = SingUpVC;
 			sourceTree = "<group>";
 		};
-		7027F856287E95D900407481 /* BookMarkVC */ = {
+		7027F856287E95D900407481 /* FavouriteVC */ = {
 			isa = PBXGroup;
 			children = (
-				7027F857287E95D900407481 /* BookMarkVC.swift */,
+				7027F857287E95D900407481 /* FavouriteVC.swift */,
 			);
-			path = BookMarkVC;
+			path = FavouriteVC;
 			sourceTree = "<group>";
 		};
 		7027F858287E95D900407481 /* LoginVC */ = {
@@ -483,6 +488,7 @@
 		7027F860287E95D900407481 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				D6E4F8CC287FF93C0029F046 /* ReachabilityC */,
 				7027F861287E95D900407481 /* Config */,
 				7027F863287E95D900407481 /* CustomClasses */,
 				7027F86E287E95D900407481 /* CustomExtension */,
@@ -620,7 +626,7 @@
 			isa = PBXGroup;
 			children = (
 				7027F882287E95D900407481 /* BaseService.swift */,
-				7027F883287E95D900407481 /* LoginService.swift */,
+				D6E4F8D1287FFAFA0029F046 /* TrendingMovieService.swift */,
 			);
 			path = BaseService;
 			sourceTree = "<group>";
@@ -693,6 +699,22 @@
 				C4C55955DC6B521740DACACA /* Pods-RxTrendingMoviesTests.release(development).xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D6E4F8C9287FF72E0029F046 /* MovieModel */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4F8CA287FF8700029F046 /* MovieModel.swift */,
+			);
+			path = MovieModel;
+			sourceTree = "<group>";
+		};
+		D6E4F8CC287FF93C0029F046 /* ReachabilityC */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4F8CD287FF9570029F046 /* ReachabilityC.swift */,
+			);
+			path = ReachabilityC;
 			sourceTree = "<group>";
 		};
 		D6FA619D286DD308002FBC4E = {
@@ -984,18 +1006,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6E4F8CB287FF8700029F046 /* MovieModel.swift in Sources */,
 				7027F898287E95D900407481 /* customLableTblCell.swift in Sources */,
-				7027F8B7287E95D900407481 /* LoginService.swift in Sources */,
 				7027F89C287E95D900407481 /* HomeVC.swift in Sources */,
 				7027F88E287E95D900407481 /* CreateUserModel.swift in Sources */,
 				7027F8A6287E95D900407481 /* CustomLabel.swift in Sources */,
 				7027F8A7287E95D900407481 /* CustomButton.swift in Sources */,
-				7027F886287E95D900407481 /* BookMarkViewModel.swift in Sources */,
+				7027F886287E95D900407481 /* FavouriteViewModel.swift in Sources */,
+				D6E4F8CE287FF9570029F046 /* ReachabilityC.swift in Sources */,
 				7027F887287E95D900407481 /* ForgotPasswordModel.swift in Sources */,
 				7027F888287E95D900407481 /* SignUpViewModel.swift in Sources */,
 				7027F8AB287E95D900407481 /* Constant.swift in Sources */,
 				7027F8B2287E95D900407481 /* ViewControllerIndentifier.swift in Sources */,
-				7027F89E287E95D900407481 /* BookMarkVC.swift in Sources */,
+				7027F89E287E95D900407481 /* FavouriteVC.swift in Sources */,
 				7027F8B5287E95D900407481 /* FirebaseAuthService.swift in Sources */,
 				7027F8B6287E95D900407481 /* BaseService.swift in Sources */,
 				7027F890287E95D900407481 /* treandingMoviesClCell.swift in Sources */,
@@ -1011,10 +1034,11 @@
 				7027F8B3287E95D900407481 /* Utility.swift in Sources */,
 				7027F8A9287E95D900407481 /* CustomTextField.swift in Sources */,
 				7027F896287E95D900407481 /* customBtnTblCell.swift in Sources */,
+				D6E4F8D2287FFAFA0029F046 /* TrendingMovieService.swift in Sources */,
 				7027F8A0287E95D900407481 /* ForgotPasswordVC.swift in Sources */,
 				7027F899287E95D900407481 /* LoginView.swift in Sources */,
-				7027F88F287E95D900407481 /* bookMarkMovieClCell.swift in Sources */,
-				7027F893287E95D900407481 /* BookMarkView.swift in Sources */,
+				7027F88F287E95D900407481 /* favouriteMovieClCell.swift in Sources */,
+				7027F893287E95D900407481 /* FavouriteView.swift in Sources */,
 				7027F8A4287E95D900407481 /* Config.swift in Sources */,
 				7027F8B1287E95D900407481 /* Validation.swift in Sources */,
 				7027F894287E95D900407481 /* HomeView.swift in Sources */,
@@ -1150,7 +1174,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1158,7 +1182,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rxmanage.RxManagement;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rxTreanding.RxTrendingMovies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1279,7 +1303,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1287,7 +1311,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rxmanage.RxManagement;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rxTreanding.RxTrendingMovies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1472,7 +1496,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1480,7 +1504,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rxmanage.RxManagement;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rxTreanding.RxTrendingMovies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1502,7 +1526,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1510,7 +1534,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rxmanage.RxManagement;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rxTreanding.RxTrendingMovies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
