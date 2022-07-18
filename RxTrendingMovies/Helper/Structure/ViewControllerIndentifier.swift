@@ -12,6 +12,7 @@ struct ViewControllerIdentifier
     let loginVC   =  "loginVCIdentifier"
     let signUpVC = "signUpVCIdentifier"
     let forgotPasswordVC = "ForgotPasswordVCIdentifier"
+    let movieDetailsVC = "MovieDetailsVCIdentifier"
 }
 
 struct TableViewCellIdentifier
