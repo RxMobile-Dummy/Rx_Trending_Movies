@@ -9,16 +9,15 @@ import Foundation
 import UIKit
 
 //MARK: - Main URL
-//let REST_SERVICE_URL                  =   "http://www.demoaws.picsy.in"
-//let REST_SERVICE_URL                  =   "http://www.fd.picsydev.com"
-//let REST_SERVICE_URL                  =   "http://www.picsyv6.picsydev.com"
-//let REST_SERVICE_URL                  =   "http://staging.picsydev.com"
-//let REST_SERVICE_URL                  =   "https://www.picsy.in"
-let REST_SERVICE_URL                  =   "http://www.picsyqa.picsydev.com"
-let REST_SERVICE_MAIN_URL   =  REST_SERVICE_URL + "/api/"
+let REST_SERVICE_MAIN_URL   =  "https://api.themoviedb.org/3/"
 
 //MARK: - API URL
-let kPOST_LOGIN_URL = "user/login"
+let kGET_TRENDING_LIST = "trending/movie/week"
+let kGET_IMAGE_PATH  =   "https://image.tmdb.org/t/p/original"
+let kGET_DETAILS_MOVIE  =   "movie/"
+
+//MARK: - API Key
+let kAPIKEY = "efb6cac7ab6a05e4522f6b4d1ad0fa43"
 
 //MARK: - AppDelegate Object
 let SwiftAppDelegate  = (UIApplication.shared.delegate as! AppDelegate)
@@ -28,15 +27,21 @@ var sceneDelegate = SceneDelegate()
 let kVIEWCONTROLLER_IDENTIFIER = ViewControllerIdentifier()
 let kTABLEVIEW_CELL_IDENTIFIER = TableViewCellIdentifier()
 
+//MARK: - ViewController Title
+let kTitleOfFavourite = "Favourite"
+let kTitleOfHome = "Home"
+
 //MARK: - Button Title
 let kBTN_LOGIN = "Login"
 let kBTN_FORGOTPASSWORD = "Forgot Password?"
 let kBTN_SIGNUP = "Sing Up"
+let kBTN_RESET_PASSWORD = "Reset Password"
 
 //MARK: - Lable Title
 let kLBL_OR  =  "OR"
 let kALERT = "Alert"
 let kFORGOT_PASSWORD = "Forgot Password"
+let kMSG_PLEASE_ENTER_YOUR_REGISTER_EMAIL_ADDRESS  = "Please enter your register email address, so we will send you link to your email"
 
 //MARK: - Textfield PlaceHolder
 let kTEXTFIELD_ENTER_EMAIL = "Enter email"
@@ -59,8 +64,10 @@ let kMSG_PASSWORD_CONFIRMPASSWORD_DO_NOT_MATCH   = "Password and confirm passwor
 let kIMG_BACK_ARROW = "img_back_arrow"
 let kIMG_VISIBILITY_OFF = "img_visibility_off"
 let kIMG_VISIBILITY = "img_visibility"
-let kIMG_BOOKMARK = "img_bookmark"
+let kIMG_FAVOURITE = "img_fill_fav"
+let kIMG_BORDER_FAVOURITE = "img_border_fav"
 let kIMG_HOME = "img_home"
+let kIMG_PLACEHOLDER = "img_placeholder"
 
 
 var kisLogin : Bool = false

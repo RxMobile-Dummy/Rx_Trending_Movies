@@ -44,9 +44,6 @@ class LoginVC: UIViewController , UITextFieldDelegate {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
     objLoginView.intiallyLoadView(vc: self)
-      
-      print(Environment.apiKey)
-      print(Environment.rootURL)
   }
 
 

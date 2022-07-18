@@ -15,7 +15,6 @@ class FirebaseAuthService: NSObject {
   func createUser(createUserModel : CreateUserModel , completionBlock: @escaping (_ success: Bool , _ errorData : Error?) -> Void) {
     FirebaseAuthService.firebaseAuth.createUser(withEmail: createUserModel.email ?? "", password: createUserModel.password ?? "") {(authResult, error) in
       if let user = authResult?.user {
-        print(user)
         completionBlock(true , error)
       } else {
         completionBlock(false , error)
