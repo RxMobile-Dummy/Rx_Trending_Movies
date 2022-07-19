@@ -40,7 +40,6 @@ class FavouriteVC: UIViewController , UICollectionViewDelegate , UICollectionVie
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return CGSize(width: (collectionView.frame.size.width / 2) , height: (collectionView.frame.size.width / 2))
   }
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let objMovieDetail = Utility.getStoryboard()?.instantiateViewController(withIdentifier: kVIEWCONTROLLER_IDENTIFIER.movieDetailsVC) as! MovieDetailsVC
         objMovieDetail.dictTrendingMovie = arrFavouriteData[indexPath.row]

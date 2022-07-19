@@ -20,7 +20,7 @@ target 'RxTrendingMovies' do
   pod 'Alamofire'
   pod 'AlamofireObjectMapper'
   pod 'Kingfisher'
-  pod 'SnapKit'
+  pod 'SnapKit' 
 
   # Pods for RxTreandingMovies
 

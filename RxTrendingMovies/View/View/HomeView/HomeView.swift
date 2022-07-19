@@ -9,7 +9,8 @@ import UIKit
 
 class HomeView: NSObject {
 
-  static var baseService = BaseService()
+static var baseService = BaseService()
+
   ///Object of Home View Model.
   static var objHomeViewModel = HomeViewModel()
 
