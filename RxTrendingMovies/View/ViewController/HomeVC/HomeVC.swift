@@ -69,6 +69,12 @@ class HomeVC: UIViewController , UICollectionViewDelegate , UICollectionViewData
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return CGSize(width: (collectionView.frame.size.width / 2) , height: (collectionView.frame.size.width / 2))
   }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let objMovieDetail = Utility.getStoryboard()?.instantiateViewController(withIdentifier: kVIEWCONTROLLER_IDENTIFIER.movieDetailsVC) as! MovieDetailsVC
+        objMovieDetail.dictTrendingMovie = arrTrendingMovieList[indexPath.row]
+        tabBarController?.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(objMovieDetail, animated: true)
+    }
   
   //MARK: - Button Action Method
   @IBAction func btnActionLogout(_ sender: Any) {

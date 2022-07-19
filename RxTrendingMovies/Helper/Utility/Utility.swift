@@ -106,12 +106,12 @@ class Utility: NSObject {
       let appearance = UINavigationBarAppearance()
       appearance.configureWithOpaqueBackground()
       appearance.backgroundColor = Config.BTN_THEME_COLOR
-      appearance.titleTextAttributes = [NSAttributedString.Key.font: Config.FONTBOLD14 ?? UIFont(),  NSAttributedString.Key.foregroundColor: Config.whiteColor]
+      appearance.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18),  NSAttributedString.Key.foregroundColor: Config.whiteColor]
       UINavigationBar.appearance().standardAppearance = appearance
       UINavigationBar.appearance().scrollEdgeAppearance = UINavigationBar.appearance().standardAppearance
     }else{
       UINavigationBar.appearance().barTintColor = Config.BTN_THEME_COLOR
-      UINavigationBar.appearance().titleTextAttributes = [ NSAttributedString.Key.font: Config.FONTBOLD14 ?? UIFont(),  NSAttributedString.Key.foregroundColor: Config.whiteColor]
+      UINavigationBar.appearance().titleTextAttributes = [ NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18),  NSAttributedString.Key.foregroundColor: Config.whiteColor]
     }
   }
 }
