@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FB73AD628883834001DDB44 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FB73AD528883834001DDB44 /* GoogleService-Info.plist */; };
 		257895BF044973B03F94723F /* Pods_RxTrendingMoviesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D8B066B94A4065AA3417AF /* Pods_RxTrendingMoviesTests.framework */; };
 		3EEFBEB5314E5041CC2C9C2A /* Pods_RxTrendingMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBD5323B0F66DE74E8130C0 /* Pods_RxTrendingMovies.framework */; };
-		70230A222885753F003B80DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70230A212885753F003B80DA /* GoogleService-Info.plist */; };
 		70230A262885836C003B80DA /* MovieDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70230A252885836C003B80DA /* MovieDetailsVC.swift */; };
 		70230A2D2885856E003B80DA /* ParallaxHeaderMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70230A282885856E003B80DA /* ParallaxHeaderMode.swift */; };
 		70230A2E2885856F003B80DA /* UIScrollView+ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70230A2A2885856E003B80DA /* UIScrollView+ParallaxHeader.swift */; };
@@ -96,6 +96,7 @@
 /* Begin PBXFileReference section */
 		0380B74535FD9B187F3369E5 /* Pods-RxManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxManagement.debug.xcconfig"; path = "Target Support Files/Pods-RxManagement/Pods-RxManagement.debug.xcconfig"; sourceTree = "<group>"; };
 		0AEEBC25E7E12A07842C52BA /* Pods-RxTrendingMovies-RxTrendingMoviesUITests.debug(development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTrendingMovies-RxTrendingMoviesUITests.debug(development).xcconfig"; path = "Target Support Files/Pods-RxTrendingMovies-RxTrendingMoviesUITests/Pods-RxTrendingMovies-RxTrendingMoviesUITests.debug(development).xcconfig"; sourceTree = "<group>"; };
+		0FB73AD528883834001DDB44 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		105AAF645F03E14C21693CAA /* Pods-RxTreandingMoviesTests.debug(development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTreandingMoviesTests.debug(development).xcconfig"; path = "Target Support Files/Pods-RxTreandingMoviesTests/Pods-RxTreandingMoviesTests.debug(development).xcconfig"; sourceTree = "<group>"; };
 		1CE389E6E14DC366F1B01247 /* Pods-RxTreandingMovies-RxTreandingMoviesUITests.release(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTreandingMovies-RxTreandingMoviesUITests.release(production).xcconfig"; path = "Target Support Files/Pods-RxTreandingMovies-RxTreandingMoviesUITests/Pods-RxTreandingMovies-RxTreandingMoviesUITests.release(production).xcconfig"; sourceTree = "<group>"; };
 		2033E9FC586EDDD19AEAF2CE /* Pods-RxTreandingMovies-RxTreandingMoviesUITests.debug(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTreandingMovies-RxTreandingMoviesUITests.debug(production).xcconfig"; path = "Target Support Files/Pods-RxTreandingMovies-RxTreandingMoviesUITests/Pods-RxTreandingMovies-RxTreandingMoviesUITests.debug(production).xcconfig"; sourceTree = "<group>"; };
@@ -114,7 +115,6 @@
 		6046913E990FB666A01BED8E /* Pods-RxTreandingMoviesTests.release(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTreandingMoviesTests.release(production).xcconfig"; path = "Target Support Files/Pods-RxTreandingMoviesTests/Pods-RxTreandingMoviesTests.release(production).xcconfig"; sourceTree = "<group>"; };
 		67B1F08DA6E127E99C4A2C8D /* Pods-RxTrendingMoviesTests.release(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTrendingMoviesTests.release(production).xcconfig"; path = "Target Support Files/Pods-RxTrendingMoviesTests/Pods-RxTrendingMoviesTests.release(production).xcconfig"; sourceTree = "<group>"; };
 		69E2CDD3B3FAE2864749C9CE /* Pods-RxTrendingMovies-RxTrendingMoviesUITests.debug(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTrendingMovies-RxTrendingMoviesUITests.debug(production).xcconfig"; path = "Target Support Files/Pods-RxTrendingMovies-RxTrendingMoviesUITests/Pods-RxTrendingMovies-RxTrendingMoviesUITests.debug(production).xcconfig"; sourceTree = "<group>"; };
-		70230A212885753F003B80DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70230A252885836C003B80DA /* MovieDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsVC.swift; sourceTree = "<group>"; };
 		70230A282885856E003B80DA /* ParallaxHeaderMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeaderMode.swift; sourceTree = "<group>"; };
 		70230A292885856E003B80DA /* ParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxHeader.h; sourceTree = "<group>"; };
@@ -257,7 +257,7 @@
 				7027F860287E95D900407481 /* Helper */,
 				7027F87E287E95D900407481 /* Services */,
 				7027F831287E95D800407481 /* Assets.xcassets */,
-				70230A212885753F003B80DA /* GoogleService-Info.plist */,
+				0FB73AD528883834001DDB44 /* GoogleService-Info.plist */,
 				7027F833287E95D800407481 /* LaunchScreen.storyboard */,
 				7027F87D287E95D900407481 /* Info.plist */,
 			);
@@ -888,8 +888,8 @@
 				7027F88A287E95D900407481 /* Main.storyboard in Resources */,
 				7027F8AE287E95D900407481 /* Raleway-Light.ttf in Resources */,
 				7027F8B0287E95D900407481 /* Raleway-Bold.ttf in Resources */,
+				0FB73AD628883834001DDB44 /* GoogleService-Info.plist in Resources */,
 				7027F8A1287E95D900407481 /* Development.xcconfig in Resources */,
-				70230A222885753F003B80DA /* GoogleService-Info.plist in Resources */,
 				7027F8A2287E95D900407481 /* Production.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
