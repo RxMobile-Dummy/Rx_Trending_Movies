@@ -28,7 +28,7 @@ class SignUpVC: UIViewController , UITextFieldDelegate {
   //MARK: - ViewController Objects
   /// createUser object of CreateUserModel
   var createUser = CreateUserModel()
-
+  /// objOfSignUpView object of SignUpView
   var objOfSignUpView = SignUpView()
 
 
@@ -100,7 +100,7 @@ class SignUpVC: UIViewController , UITextFieldDelegate {
             LoginViewModel.signIn(createUser: CreateUserModel(email: self.createUser.email ?? "", password: self.createUser.password ?? "")) { success, user, error  in
                 if(success == true) {
                     let uid = user?.uid
-                        kUSERDEFAULT.setValue(uid, forKey: "CurrentUser")
+                        kUSERDEFAULT.setValue(uid, forKey: kCurrentUser)
                         self.objOfSignUpView.navigateToHomeVC(vc: self)
                     } else {
                         Utility.alertShow(kALERT, message: error?.localizedDescription ?? "" , delegate: self as AnyObject)

@@ -20,6 +20,12 @@ struct TableViewCellIdentifier
   let customLblTblCellIdentifier = "customLblTblCellIdentifier"
   let customTxtFieldTblCellIdentifier  = "customTxtFieldTblCellIdentifier"
   let customBtnTblCellIdentifier  = "customBtnTblCellIdentifier"
+  let movieDetailsCellIdentifier = "movieDetailsCellIdentifier"
+}
+
+struct CollectionViewCellIdentifier {
+  let treandingMoviesClCellIdentifier =  "treandingMoviesClCellIdentifier"
+  let favouriteMovieClCellIdentifier = "favouriteMovieClCellIdentifier"
 }
 
 struct LoginReqParams : Codable {

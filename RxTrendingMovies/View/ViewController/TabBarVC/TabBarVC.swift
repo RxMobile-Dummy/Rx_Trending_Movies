@@ -9,6 +9,7 @@ import UIKit
 
 class TabBarVC: UITabBarController, UITabBarControllerDelegate {
 
+  //MARK : - ViewController Life Cycle Method
   override func viewDidLoad() {
     super.viewDidLoad()
     self.delegate = self
@@ -19,7 +20,7 @@ class TabBarVC: UITabBarController, UITabBarControllerDelegate {
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    //navigationController?.navigationItem.rightBarButtonItem?.tintColor = Config.whiteColor
-    //navigationController?.setNavigationBarHidden(false, animated: animated)
+    navigationController?.navigationItem.rightBarButtonItem?.tintColor = Config.whiteColor
+    navigationController?.setNavigationBarHidden(false, animated: animated)
   }
 }
