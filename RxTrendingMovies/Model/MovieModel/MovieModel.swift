@@ -8,9 +8,8 @@
 import Foundation
 
 // MARK: - MovieListModel DataClass
-class MovieModel : Codable
+class MovieModel : Codable , Equatable
 {
-
   let page: Int?
   let results : [MovieListModel]?
   let total_pages : Int?
@@ -20,6 +19,10 @@ class MovieModel : Codable
        case page, total_pages, results, total_results
     }
 
+  static func == (lhs: MovieModel, rhs: MovieModel) -> Bool {
+    return lhs.page == rhs.page
+  }
+
   init(page: Int? = 0, results: [MovieListModel]? = [], total_pages : Int? = 0 , total_results: Int? = 0) {
     self.page = page
     self.results = results
@@ -28,7 +31,9 @@ class MovieModel : Codable
   }
 }
 
-class MovieListModel : Codable {
+class MovieListModel : Codable  , Equatable {
+
+
   let adult : Bool?
   let backdropPath : String?
   let id : Int?
@@ -56,6 +61,10 @@ class MovieListModel : Codable {
     case voteAverage = "vote_average"
     case voteCount = "vote_count"
     case isFavourite
+  }
+
+  static func == (lhs: MovieListModel, rhs: MovieListModel) -> Bool {
+    return lhs.id == rhs.id
   }
 
   init(adult: Bool? , backdropPath: String? , id: Int? , mediaType: String?  , title: String?   , originalLanguage: String? , originalTitle: String?   , overview: String?

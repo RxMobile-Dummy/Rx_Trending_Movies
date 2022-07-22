@@ -153,5 +153,4 @@ class LoginView: NSObject {
         Utility.navigateToTabBarVC(window: sceneDelegate.window!, isPush: true)
     }
   }
-
 }

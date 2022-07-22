@@ -24,14 +24,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uS-G6-vdG">
-                                <rect key="frame" x="30" y="152" width="73" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Trending Movies" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uS-G6-vdG">
+                                <rect key="frame" x="30" y="152" width="274.5" height="43"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <nil key="textColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1y-sI-YCj">
-                                <rect key="frame" x="30" y="206" width="354" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1y-sI-YCj">
+                                <rect key="frame" x="30" y="206" width="354" height="0.0"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -122,7 +122,7 @@
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MXx-1q-okS">
                                 <rect key="frame" x="356.5" y="804" width="12.5" height="16.5"/>
-                                <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3O7-J7-wbM" customClass="CustomButton" customModule="RxTrendingMovies" customModuleProvider="target">
                                 <rect key="frame" x="339" y="435" width="30" height="40.5"/>
@@ -506,7 +506,7 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <outlet property="btnBookMark" destination="5LQ-Uz-bDI" id="XLh-MP-YUP"/>
+                                            <outlet property="btnHomeFavourite" destination="5LQ-Uz-bDI" id="k9q-gf-Ivf"/>
                                             <outlet property="lblMovieName" destination="eBO-Gv-aO1" id="vEA-Ed-7vI"/>
                                             <outlet property="mainView" destination="0zZ-Fd-0Yd" id="aiu-3o-ZV2"/>
                                             <outlet property="movieImageView" destination="kjC-Sv-z0p" id="onk-xF-4Zo"/>
@@ -518,12 +518,20 @@
                                     <outlet property="delegate" destination="QJW-57-u9D" id="PxC-bd-SXb"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrm-Zp-vkc" customClass="CustomLabel" customModule="RxTrendingMovies" customModuleProvider="target">
+                                <rect key="frame" x="186" y="440" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6fx-yV-0Vg"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Xrm-Zp-vkc" firstAttribute="centerY" secondItem="6fx-yV-0Vg" secondAttribute="centerY" id="9t8-54-pJx"/>
                             <constraint firstItem="1Aa-Aj-cus" firstAttribute="top" secondItem="6fx-yV-0Vg" secondAttribute="top" constant="5" id="Tvi-Z6-WXb"/>
                             <constraint firstItem="1Aa-Aj-cus" firstAttribute="bottom" secondItem="6fx-yV-0Vg" secondAttribute="bottom" id="bIW-Hh-xrU"/>
+                            <constraint firstItem="Xrm-Zp-vkc" firstAttribute="centerX" secondItem="6fx-yV-0Vg" secondAttribute="centerX" id="muN-9S-WZx"/>
                             <constraint firstItem="1Aa-Aj-cus" firstAttribute="leading" secondItem="6fx-yV-0Vg" secondAttribute="leading" constant="5" id="ofb-sI-WJW"/>
                             <constraint firstItem="1Aa-Aj-cus" firstAttribute="trailing" secondItem="6fx-yV-0Vg" secondAttribute="trailing" constant="-5" id="oh8-zA-RfC"/>
                         </constraints>
@@ -537,6 +545,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="lblEmptyMovie" destination="Xrm-Zp-vkc" id="wF4-P0-FeL"/>
                         <outlet property="treandingMovieCl" destination="1Aa-Aj-cus" id="RD4-cv-qJl"/>
                     </connections>
                 </viewController>

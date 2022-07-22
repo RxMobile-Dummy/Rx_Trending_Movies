@@ -30,11 +30,6 @@ class LoginVC: UIViewController , UITextFieldDelegate {
   /// objLoginView object of LoginView
   var objLoginView = LoginView()
 
-  var strForgotPassword : String = ""
-  var strEmail = ""
-  var cancellable: AnyCancellable?
-  let canSendEmailString = PassthroughSubject<String, Never>()
-
   
   //MARK: - Life cycle of ViewController
   /**
@@ -98,16 +93,16 @@ class LoginVC: UIViewController , UITextFieldDelegate {
    */
   @IBAction func btnActionLogin(_ sender: Any) {
     if(objLoginView.checkValidationForLogin(vc: self)) {
-         LoginViewModel.signIn(createUser: CreateUserModel(email: createUser.email ?? "", password: createUser.password ?? "")) { success, user, error  in
-         if(success == true) {
-             let uid = user?.uid
-                 kUSERDEFAULT.setValue(uid, forKey: "CurrentUser")
-                 self.objLoginView.navigateToHomeVC(vc: self)
-             } else {
-                 Utility.alertShow(kALERT, message: error?.localizedDescription ?? "" , delegate: self as AnyObject)
-             }
-         }
-     }
+      LoginViewModel.signIn(createUser: CreateUserModel(email: createUser.email ?? "", password: createUser.password ?? "")) { success, user, error  in
+        if(success == true) {
+          let uid = user?.uid
+          kUSERDEFAULT.setValue(uid, forKey: kCurrentUser)
+          self.objLoginView.navigateToHomeVC(vc: self)
+        } else {
+          Utility.alertShow(kALERT, message: error?.localizedDescription ?? "" , delegate: self as AnyObject)
+        }
+      }
+    }
   }
 
   /**
@@ -123,26 +118,6 @@ class LoginVC: UIViewController , UITextFieldDelegate {
    */
   @IBAction func btnActionForgotPassword(_ sender: Any) {
     objLoginView.navigateToForgotPassword(vc : self)
-      
-    ////    let publisher = self.canSendEmailString.eraseToAnyPublisher()
-    //    let subscriber2 =  self.canSendEmailString.sink(receiveValue: { value in
-    //      print("value: ", value)
-    //    })
-    //    CustomAlert.displayAlertWithTextField(onView: self, withTitle: "Forgot Password" , withAlertMsg: "We send you an email with instructions on how to reset your password.", placeHolderMessage: "Enter Email", alertImage: "", yesButtonTitle: "Yes", yesButtonAction: { strTextField in
-    //      self.strForgotPassword = strTextField
-    //      //self.canSendEmailString.send("txtAlertTextField.text!")
-    //      if(LoginView.checkValidationForForgotPassword(vc: self)) {
-    //        LoginViewModel.forgotPassword(createUser: CreateUserModel(email: strTextField)) { success, error in
-    //          if(success == true) {
-    //
-    //          } else {
-    //            Utility.alertShow(kALERT, message: error?.localizedDescription ?? "" , delegate: self as AnyObject)
-    //          }
-    //        }
-    //      }
-    //    }, noButtonTitle: "No") {
-    //      print("No")
-    //    }
   }
 
   /**
