@@ -32,16 +32,17 @@ class FavouriteView: NSObject {
    - Parameter vc : It is a object of FavouriteVC
    */
   func getFavouriteDataFromFirebase(vc : FavouriteVC) {
+    vc.lblEmpty.isHidden = true
     vc.favListener = FavouriteView.objFavViewModel.getFavouriteData { favouriteData, error in
       if(favouriteData?.count != 0) {
         vc.lblEmpty.isHidden = true
         vc.arrFavouriteData = favouriteData ?? []
         vc.favouriteCL.reloadData()
       } else {
+        vc.lblEmpty.isHidden = false
         vc.arrFavouriteData = []
         vc.favouriteCL.reloadData()
-        vc.lblEmpty.isHidden = false
-        CustomLabel.setCustomLblFuncation(lbl: vc.lblEmpty, lblText: "No Favourite Data Available", lblFont: Config.FONTREGULAR12, lblTextColor: Config.BlackColor, lblBgColor: Config.ClearColor, lblBorderColor: Config.ClearColor, lblBorderWidth: 0.0, lblCornerRadius: 0.0, lblAttributedText: nil, isAttributedText: false, lblTextAlignment: .center, lblNumberOfLine: 0, lblLineBreakMode: .byWordWrapping)
+        CustomLabel.setCustomLblFuncation(lbl: vc.lblEmpty, lblText: kMSG_NO_FAVOURITE_DATA_AVAILABLE , lblFont: Config.FONTREGULAR12, lblTextColor: Config.BlackColor, lblBgColor: Config.ClearColor, lblBorderColor: Config.ClearColor, lblBorderWidth: 0.0, lblCornerRadius: 0.0, lblAttributedText: nil, isAttributedText: false, lblTextAlignment: .center, lblNumberOfLine: 0, lblLineBreakMode: .byWordWrapping)
       }
     }
   }

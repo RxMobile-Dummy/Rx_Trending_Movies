@@ -16,8 +16,8 @@ class treandingMoviesClCell: UICollectionViewCell {
   @IBOutlet weak var movieImageView : UIImageView!
   /// lblMovieName object of CustomLabel
   @IBOutlet weak var lblMovieName: CustomLabel!
-  /// btnBookMark object of CustomButton
-  @IBOutlet weak var btnBookMark: CustomButton!
+  /// btnHomeFavourite object of CustomButton
+  @IBOutlet weak var btnHomeFavourite: CustomButton!
 
   override func layoutSubviews() {
     super.layoutSubviews()
@@ -35,12 +35,12 @@ class treandingMoviesClCell: UICollectionViewCell {
     movieImageView.contentMode = .scaleToFill
     movieImageView.kf.setImage(with: url!)
     CustomLabel.setCustomLblFuncation(lbl: lblMovieName, lblText: movieModel.title ?? "", lblFont: Config.FONTREGULAR12, lblTextColor: Config.BlackColor, lblBgColor: Config.ClearColor, lblBorderColor: Config.ClearColor, lblBorderWidth: 0.0, lblCornerRadius: 0.0, lblAttributedText: nil, isAttributedText: false, lblTextAlignment: .center, lblNumberOfLine: 0, lblLineBreakMode: .byWordWrapping)
-    btnBookMark.tag = index
+    btnHomeFavourite.tag = index
     if(movieModel.isFavourite == true) {
-      CustomButton.setBtnFontTitleBgColorTintColorWithImage(btn: btnBookMark, andImgOfButton: kIMG_FAVOURITE, andIsImage: true, andIsOnlyImageNoTintColor: false, andBtnTintColor: Config.BTN_THEME_COLOR, andBtnTitle: "", andBtnTitleColor: Config.ClearColor, andBtnFont: Config.FONTREGULAR10, andBtnBgColor: Config.ClearColor, andBtnContentMode: .center, andBtnCornerRadius: 0.0, andBtnBorderColor: Config.ClearColor, andBtnBorderWidth: 0.0, lblNumberOfLine: 0, lblLineBreakMode: .byWordWrapping, lblTextAlignMent: .center)
+      CustomButton.setBtnFontTitleBgColorTintColorWithImage(btn: btnHomeFavourite, andImgOfButton: kIMG_FAVOURITE, andIsImage: true, andIsOnlyImageNoTintColor: false, andBtnTintColor: Config.BTN_THEME_COLOR, andBtnTitle: "", andBtnTitleColor: Config.ClearColor, andBtnFont: Config.FONTREGULAR10, andBtnBgColor: Config.ClearColor, andBtnContentMode: .center, andBtnCornerRadius: 0.0, andBtnBorderColor: Config.ClearColor, andBtnBorderWidth: 0.0, lblNumberOfLine: 0, lblLineBreakMode: .byWordWrapping, lblTextAlignMent: .center)
     } else {
-      CustomButton.setBtnFontTitleBgColorTintColorWithImage(btn: btnBookMark, andImgOfButton: kIMG_BORDER_FAVOURITE, andIsImage: true, andIsOnlyImageNoTintColor: false, andBtnTintColor: Config.BTN_THEME_COLOR, andBtnTitle: "", andBtnTitleColor: Config.ClearColor, andBtnFont: Config.FONTREGULAR10, andBtnBgColor: Config.ClearColor, andBtnContentMode: .center, andBtnCornerRadius: 0.0, andBtnBorderColor: Config.ClearColor, andBtnBorderWidth: 0.0, lblNumberOfLine: 0, lblLineBreakMode: .byWordWrapping, lblTextAlignMent: .center)
+      CustomButton.setBtnFontTitleBgColorTintColorWithImage(btn: btnHomeFavourite, andImgOfButton: kIMG_BORDER_FAVOURITE, andIsImage: true, andIsOnlyImageNoTintColor: false, andBtnTintColor: Config.BTN_THEME_COLOR, andBtnTitle: "", andBtnTitleColor: Config.ClearColor, andBtnFont: Config.FONTREGULAR10, andBtnBgColor: Config.ClearColor, andBtnContentMode: .center, andBtnCornerRadius: 0.0, andBtnBorderColor: Config.ClearColor, andBtnBorderWidth: 0.0, lblNumberOfLine: 0, lblLineBreakMode: .byWordWrapping, lblTextAlignMent: .center)
     }
-    btnBookMark.addTarget(vc, action:#selector(vc.btnActionBookMark), for: UIControl.Event.touchUpInside)
+    btnHomeFavourite.addTarget(vc, action:#selector(vc.btnActionFavouriteMethod), for: UIControl.Event.touchUpInside)
   }
 }

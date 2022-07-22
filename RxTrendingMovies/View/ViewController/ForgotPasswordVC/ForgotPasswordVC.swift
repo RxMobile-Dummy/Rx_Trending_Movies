@@ -146,7 +146,7 @@ class ForgotPasswordVC: UIViewController,UITableViewDelegate,UITableViewDataSour
     if(ForgotPasswordView.checkValidationForForgotPassword(vc: self)) {
       ForgotPasswordModel.forgotPassword(createUser: CreateUserModel(email: createUser.email ?? "")) { success, error in
         if(success == true) {
-            self.showToast(message: "A reset password link is sent on your mail.")
+            self.showToast(message: kMSG_A_RESET_PASSWORD_LINK_IS_SENT_ON_YOUR_MAIL)
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.navigationController?.popViewController(animated: true)
             }
