@@ -16,7 +16,7 @@ target 'RxTrendingMovies' do
   pod 'IQKeyboardManagerSwift'
   pod 'PKHUD'
   pod 'PINRemoteImage'
-  pod 'SlideMenuControllerSwift'
+  pod 'SlideMenuControllerSwift', :git => 'https://github.com/AtomicSLLC/SlideMenuControllerSwift.git', :branch => 'swift5'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
   pod 'Firebase/RemoteConfig'
