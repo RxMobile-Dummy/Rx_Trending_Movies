@@ -114,4 +114,24 @@ class Utility: NSObject {
       UINavigationBar.appearance().titleTextAttributes = [ NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18),  NSAttributedString.Key.foregroundColor: Config.whiteColor]
     }
   }
+
+  //MARK: - Animation Color Method
+  /**
+   Call this method for Animate Color of String
+   - Parameter searchText: Object of String
+   - Parameter lblMovie: Object of UILabel
+   */
+  class func animateColor(of searchText: String , lblMovie : UILabel) {
+    UIView.transition(with: lblMovie, duration: 0.5, options: .transitionFlipFromLeft, animations: {
+      lblMovie.textColor = UIColor.clear
+      lblMovie.text = searchText
+    }, completion: { _ in
+      lblMovie.textColor = Config.BTN_THEME_COLOR
+      lblMovie.textAlignment = .center
+      lblMovie.font = Config.FONTBOLD24
+      UIView.transition(with: lblMovie, duration: 1.5, options: .transitionFlipFromLeft, animations: {
+        lblMovie.text = searchText
+      })
+    })
+  }
 }

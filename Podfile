@@ -30,6 +30,7 @@ target 'RxTrendingMovies' do
   pod 'Kingfisher'
   pod 'SnapKit'
   pod 'Mocker', '~> 2.5.4'
+  pod 'TransitionButton'
 
   # Pods for RxTreandingMovies
 

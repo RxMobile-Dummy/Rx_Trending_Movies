@@ -43,7 +43,9 @@ class LoginView: NSObject {
     CustomTextField.setCustomTextfield(textField: vc.passWordTextField, textFieldFont: Config.FONTREGULAR14, textFieldText: "", textFieldTextColor: Config.BlackColor, textFieldTextAligenment: .left, textFieldPlaceHolder: kTEXTFIELD_ENTER_PASSWORD, textFieldTintColor: Config.BlackColor, isTextFieldBorder: false, textFieldBorderColor: Config.ClearColor, textFieldBorderWidth: 0.0, isTextFieldLeftView: true, textFieldLeftViewBgColor: Config.ClearColor, textFieldLeftViewMode: .always)
     
     CustomButton.setBtnFontTitleBgColorTintColorWithImage(btn: vc.btnShowHidePassword, andImgOfButton: kIMG_VISIBILITY_OFF, andIsImage: true, andIsOnlyImageNoTintColor: false, andBtnTintColor: Config.BTN_THEME_COLOR, andBtnTitle: "", andBtnTitleColor: Config.ClearColor, andBtnFont: Config.FONTBOLD16, andBtnBgColor: Config.ClearColor, andBtnContentMode: .left, andBtnCornerRadius: 0.0, andBtnBorderColor: Config.ClearColor, andBtnBorderWidth: 0.0, lblNumberOfLine: 0, lblLineBreakMode: .byWordWrapping, lblTextAlignMent: .left)
-
+    
+    //Utility.animateColor(of: "Are you not entertained?!\nHere's something entertaining for you!!", lblMovie: vc.lblMovieDescription)
+    
   }
   
   

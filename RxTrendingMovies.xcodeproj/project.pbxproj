@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0FB73AD628883834001DDB44 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FB73AD528883834001DDB44 /* GoogleService-Info.plist */; };
 		257895BF044973B03F94723F /* Pods_RxTrendingMoviesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D8B066B94A4065AA3417AF /* Pods_RxTrendingMoviesTests.framework */; };
 		3EEFBEB5314E5041CC2C9C2A /* Pods_RxTrendingMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBD5323B0F66DE74E8130C0 /* Pods_RxTrendingMovies.framework */; };
 		70230A262885836C003B80DA /* MovieDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70230A252885836C003B80DA /* MovieDetailsVC.swift */; };
@@ -70,6 +69,7 @@
 		7027F8C0287E963F00407481 /* RxTrendingMoviesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F8BE287E963F00407481 /* RxTrendingMoviesUITestsLaunchTests.swift */; };
 		7027F8C2287EA5A400407481 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027F8C1287EA5A400407481 /* Environment.swift */; };
 		9C2D37E12606B26CF4CF596A /* Pods_RxTrendingMovies_RxTrendingMoviesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4D58488742B1A245AA22AA /* Pods_RxTrendingMovies_RxTrendingMoviesUITests.framework */; };
+		D6260EC2288AE36600D99DF4 /* ForgotPasswordTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6260EC1288AE36600D99DF4 /* ForgotPasswordTestCase.swift */; };
 		D6D1BF4F2887D4CE00104549 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6D1BF4E2887D4CE00104549 /* GoogleService-Info.plist */; };
 		D6D1BF512887D51D00104549 /* HomeVCAPIUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D1BF502887D51D00104549 /* HomeVCAPIUnitTests.swift */; };
 		D6E4F8CB287FF8700029F046 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4F8CA287FF8700029F046 /* MovieModel.swift */; };
@@ -96,7 +96,6 @@
 /* Begin PBXFileReference section */
 		0380B74535FD9B187F3369E5 /* Pods-RxManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxManagement.debug.xcconfig"; path = "Target Support Files/Pods-RxManagement/Pods-RxManagement.debug.xcconfig"; sourceTree = "<group>"; };
 		0AEEBC25E7E12A07842C52BA /* Pods-RxTrendingMovies-RxTrendingMoviesUITests.debug(development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTrendingMovies-RxTrendingMoviesUITests.debug(development).xcconfig"; path = "Target Support Files/Pods-RxTrendingMovies-RxTrendingMoviesUITests/Pods-RxTrendingMovies-RxTrendingMoviesUITests.debug(development).xcconfig"; sourceTree = "<group>"; };
-		0FB73AD528883834001DDB44 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		105AAF645F03E14C21693CAA /* Pods-RxTreandingMoviesTests.debug(development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTreandingMoviesTests.debug(development).xcconfig"; path = "Target Support Files/Pods-RxTreandingMoviesTests/Pods-RxTreandingMoviesTests.debug(development).xcconfig"; sourceTree = "<group>"; };
 		1CE389E6E14DC366F1B01247 /* Pods-RxTreandingMovies-RxTreandingMoviesUITests.release(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTreandingMovies-RxTreandingMoviesUITests.release(production).xcconfig"; path = "Target Support Files/Pods-RxTreandingMovies-RxTreandingMoviesUITests/Pods-RxTreandingMovies-RxTreandingMoviesUITests.release(production).xcconfig"; sourceTree = "<group>"; };
 		2033E9FC586EDDD19AEAF2CE /* Pods-RxTreandingMovies-RxTreandingMoviesUITests.debug(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTreandingMovies-RxTreandingMoviesUITests.debug(production).xcconfig"; path = "Target Support Files/Pods-RxTreandingMovies-RxTreandingMoviesUITests/Pods-RxTreandingMovies-RxTreandingMoviesUITests.debug(production).xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +188,7 @@
 		C4A747355266FCBB6206C827 /* Pods-RxTrendingMovies.debug(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTrendingMovies.debug(production).xcconfig"; path = "Target Support Files/Pods-RxTrendingMovies/Pods-RxTrendingMovies.debug(production).xcconfig"; sourceTree = "<group>"; };
 		C4C55955DC6B521740DACACA /* Pods-RxTrendingMoviesTests.release(development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTrendingMoviesTests.release(development).xcconfig"; path = "Target Support Files/Pods-RxTrendingMoviesTests/Pods-RxTrendingMoviesTests.release(development).xcconfig"; sourceTree = "<group>"; };
 		D270822A4E691413963A86EB /* Pods-RxTreandingMovies-RxTreandingMoviesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTreandingMovies-RxTreandingMoviesUITests.release.xcconfig"; path = "Target Support Files/Pods-RxTreandingMovies-RxTreandingMoviesUITests/Pods-RxTreandingMovies-RxTreandingMoviesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D6260EC1288AE36600D99DF4 /* ForgotPasswordTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordTestCase.swift; sourceTree = "<group>"; };
 		D6D1BF4E2887D4CE00104549 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D6D1BF502887D51D00104549 /* HomeVCAPIUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVCAPIUnitTests.swift; sourceTree = "<group>"; };
 		D6E4F8CA287FF8700029F046 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
@@ -653,6 +653,7 @@
 		7027F8B9287E961500407481 /* RxTrendingMoviesTests */ = {
 			isa = PBXGroup;
 			children = (
+				D6260EC1288AE36600D99DF4 /* ForgotPasswordTestCase.swift */,
 				D6D1BF502887D51D00104549 /* HomeVCAPIUnitTests.swift */,
 				7027F8BA287E961500407481 /* RxTrendingMoviesTests.swift */,
 				70230A382885946A003B80DA /* LoginUnitTestCase.swift */,
@@ -879,8 +880,7 @@
 				7027F88A287E95D900407481 /* Main.storyboard in Resources */,
 				7027F8AE287E95D900407481 /* Raleway-Light.ttf in Resources */,
 				7027F8B0287E95D900407481 /* Raleway-Bold.ttf in Resources */,
-        D6D1BF4F2887D4CE00104549 /* GoogleService-Info.plist in Resources */,
-
+				D6D1BF4F2887D4CE00104549 /* GoogleService-Info.plist in Resources */,
 				7027F8A1287E95D900407481 /* Development.xcconfig in Resources */,
 				7027F8A2287E95D900407481 /* Production.xcconfig in Resources */,
 			);
@@ -1084,6 +1084,7 @@
 			files = (
 				70230A3A2885946A003B80DA /* LoginUnitTestCase.swift in Sources */,
 				D6D1BF512887D51D00104549 /* HomeVCAPIUnitTests.swift in Sources */,
+				D6260EC2288AE36600D99DF4 /* ForgotPasswordTestCase.swift in Sources */,
 				7027F8BB287E961500407481 /* RxTrendingMoviesTests.swift in Sources */,
 				70230A392885946A003B80DA /* SignUpUnitTestCase.swift in Sources */,
 			);
