@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+//MARK: - UIButton Extension
 extension UIButton
 {
     func setLeftButton(_ navButton:UIButton, _ frame : CGRect , _ titleLabel : String , _ image : String , _ isImage : Bool)
@@ -80,6 +81,7 @@ extension UIButton
     }
 }
 
+//MARK: - UIViewController Extension
 extension UIViewController {
     
     ///method for navigation bar back button
@@ -129,9 +131,9 @@ extension UIViewController {
             toastLabel.removeFromSuperview()
         })
     }
-    
 }
 
+//MARK: - UIColor Extension
 extension UIColor {
 
     convenience init(hexString: String) {
@@ -153,6 +155,7 @@ extension UIColor {
     }
 }
 
+//MARK: - String Extension
 extension String {
     func heightForView(font:UIFont, width:CGFloat) -> CGFloat{
         let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
@@ -166,6 +169,7 @@ extension String {
     }
 }
 
+//MARK: - UIImageView Extension
 extension UIImageView {
     func loadFrom(URLAddress: String) {
         guard let url = URL(string: URLAddress) else {
@@ -179,4 +183,29 @@ extension UIImageView {
             }
         }
     }
+}
+
+//MARK: - UIApplication Extension
+extension UIApplication
+{
+  //setUp StatusBar Backgroundcolor
+  var statusBarUIView: UIView? {
+    if #available(iOS 13.0, *) {
+      let tag = 101
+      if let statusBar = sceneDelegate.window?.viewWithTag(tag) {
+        return statusBar
+      } else {
+        let statusBarView = UIView(frame: UIApplication.shared.statusBarFrame)
+        statusBarView.tag = tag
+        statusBarView.backgroundColor = Config.BTN_THEME_COLOR
+        sceneDelegate.window?.addSubview(statusBarView)
+        return statusBarView
+      }
+    } else {
+      if responds(to: Selector(("statusBar"))) {
+        return value(forKey: "statusBar") as? UIView
+      }
+    }
+    return nil
+  }
 }

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Combine
+import TransitionButton
 
 class LoginVC: UIViewController , UITextFieldDelegate {
 
@@ -15,14 +15,16 @@ class LoginVC: UIViewController , UITextFieldDelegate {
   @IBOutlet weak var emailTextField: UITextField!
   /// passWordTextField object of UITextField
   @IBOutlet weak var passWordTextField: UITextField!
-  /// btnLogin object of CustomButton
-  @IBOutlet weak var btnLogin: CustomButton!
+  /// btnLogin object of TransitionButton
+  @IBOutlet weak var btnLogin: TransitionButton!
   /// btnForgotPassword object of CustomButton
   @IBOutlet weak var btnForgotPassword: CustomButton!
   /// btnSignUp object of CustomButton
   @IBOutlet weak var btnSignUp: CustomButton!
   /// btnShowHidePassword object of CustomButton
   @IBOutlet weak var btnShowHidePassword: CustomButton!
+  /// lblMovieDescription object of CustomLabel
+  @IBOutlet weak var lblMovieDescription: CustomLabel!
 
   //MARK: - ViewController Objects
   /// createUser object of CreateUserModel
@@ -41,6 +43,11 @@ class LoginVC: UIViewController , UITextFieldDelegate {
     objLoginView.intiallyLoadView(vc: self)
   }
 
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    /// Hide Navigation Bar
+    self.navigationController?.isNavigationBarHidden = true
+  }
 
   //MARK: -  TextField Delegate method
   /**
@@ -86,25 +93,27 @@ class LoginVC: UIViewController , UITextFieldDelegate {
     }
   }
 
-
   //MARK: - Button Action Method
   /**
    Login Button Action
    */
-  @IBAction func btnActionLogin(_ sender: Any) {
+  @IBAction func btnActionLogin(_ button: TransitionButton) {
     if(objLoginView.checkValidationForLogin(vc: self)) {
+      button.startAnimation()
       LoginViewModel.signIn(createUser: CreateUserModel(email: createUser.email ?? "", password: createUser.password ?? "")) { success, user, error  in
         if(success == true) {
-          let uid = user?.uid
-          kUSERDEFAULT.setValue(uid, forKey: kCurrentUser)
-          self.objLoginView.navigateToHomeVC(vc: self)
+          button.stopAnimation(animationStyle: .expand, completion: {
+            let uid = user?.uid
+            kUSERDEFAULT.setValue(uid, forKey: kCurrentUser)
+            self.objLoginView.navigateToHomeVC(vc: self)
+          })
         } else {
           Utility.alertShow(kALERT, message: error?.localizedDescription ?? "" , delegate: self as AnyObject)
         }
       }
     }
   }
-
+ 
   /**
    SignUp Button Action
    */

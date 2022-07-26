@@ -78,6 +78,7 @@ struct Config
   static let FONTBOLD18 = UIFont(name: Config.raleway_Bold, size: 18)
   static let FONTBOLD20 = UIFont(name: Config.raleway_Bold, size: 20)
   static  let FONTBOLD22 = UIFont(name: Config.raleway_Bold, size: 22)
+  static  let FONTBOLD24 = UIFont(name: Config.raleway_Bold, size: 24)
 
   static let FONTREGULAR10 =  UIFont(name: Config.raleway_Regular, size: 10)
   static let FONTREGULAR12 =  UIFont(name: Config.raleway_Regular, size: 12)

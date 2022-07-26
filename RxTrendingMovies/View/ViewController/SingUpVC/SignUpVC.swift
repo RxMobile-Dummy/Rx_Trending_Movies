@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import TransitionButton
 
 class SignUpVC: UIViewController , UITextFieldDelegate {
 
@@ -22,8 +23,8 @@ class SignUpVC: UIViewController , UITextFieldDelegate {
   @IBOutlet weak var txtPassword: UITextField!
   /// txtConfirmPassword object of UITextField
   @IBOutlet weak var txtConfirmPassword: UITextField!
-  /// btnContinue object of UIButton
-  @IBOutlet weak var btnContinue: UIButton!
+  /// btnContinue object of TransitionButton
+  @IBOutlet weak var btnContinue: TransitionButton!
 
   //MARK: - ViewController Objects
   /// createUser object of CreateUserModel
@@ -90,22 +91,23 @@ class SignUpVC: UIViewController , UITextFieldDelegate {
   /**
    Continue Button Action
    */
-  @IBAction func btnActionContinue(_ sender: Any) {
-    
+  @IBAction func btnActionContinue(_ button: TransitionButton) {
     if(objOfSignUpView.checkValidationForLogin(vc: self)) {
-      
+      button.startAnimation()
       SignUpViewModel.createUserSignUp(createUser: CreateUserModel(firstname: createUser.firstname
                                                                    , lastname: createUser.lastname, email: createUser.email, mobilenumber: createUser.mobilenumber, password: createUser.password, confirmpassword: createUser.confirmpassword)) { success, error  in
         if(success == true) {
-            LoginViewModel.signIn(createUser: CreateUserModel(email: self.createUser.email ?? "", password: self.createUser.password ?? "")) { success, user, error  in
-                if(success == true) {
-                    let uid = user?.uid
-                        kUSERDEFAULT.setValue(uid, forKey: kCurrentUser)
-                        self.objOfSignUpView.navigateToHomeVC(vc: self)
-                    } else {
-                        Utility.alertShow(kALERT, message: error?.localizedDescription ?? "" , delegate: self as AnyObject)
-                    }
-                }
+          LoginViewModel.signIn(createUser: CreateUserModel(email: self.createUser.email ?? "", password: self.createUser.password ?? "")) { success, user, error  in
+            if(success == true) {
+              button.stopAnimation(animationStyle: .expand, completion: {
+                let uid = user?.uid
+                kUSERDEFAULT.setValue(uid, forKey: kCurrentUser)
+                self.objOfSignUpView.navigateToHomeVC(vc: self)
+              })
+            } else {
+              Utility.alertShow(kALERT, message: error?.localizedDescription ?? "" , delegate: self as AnyObject)
+            }
+          }
         } else {
           Utility.alertShow(kALERT, message: error?.localizedDescription ?? "" , delegate: self as AnyObject)
         }

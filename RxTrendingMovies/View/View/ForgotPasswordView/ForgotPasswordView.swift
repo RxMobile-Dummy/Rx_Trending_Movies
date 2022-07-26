@@ -6,7 +6,6 @@
 //
 
 import UIKit
-
 //
 //  LoginVCModel.swift
 //  ProjectDemo
@@ -21,6 +20,9 @@ import SwiftyJSON
 /// Model class of ForgotPasswordView where business logic written.
 class ForgotPasswordView: NSObject
 {
+
+  static  let validation = Validation()
+
   //MARK: - intiallyLoadView Method
   /**
    Call this method for set intially load view functions.
@@ -138,12 +140,10 @@ class ForgotPasswordView: NSObject
   class func checkValidationForForgotPassword(vc : ForgotPasswordVC) -> Bool {
     var validateForm : Bool = true
     vc.view.endEditing(true)
-    if vc.createUser.email == ""{
+    let email = ForgotPasswordView.validation.checkEmptyAndValidEmailValidation(email: vc.createUser.email)
+    if email != "" {
       validateForm = false
-      Utility.alertShow(kALERT, message: kMSG_PLEASE_ENTER_EMAIL , delegate: vc as AnyObject)
-    } else if !Utility.isValidEmail(vc.createUser.email ?? ""  ) {
-      validateForm = false
-      Utility.alertShow(kALERT, message: kMSG_PLEASE_ENTER_VALID_EMAIL , delegate: vc as AnyObject)
+      Utility.alertShow(kALERT, message: email , delegate: vc as AnyObject)
     }
     return validateForm
   }
